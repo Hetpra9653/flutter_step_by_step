@@ -1,30 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_steo_by_step/pages/login_page.dart';
+import 'pages/home_page.dart';
 
 void main() {
-  runApp(new MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: "Myself",
-      home: new Homepage(),
+    return MaterialApp(
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage()
+      },
     );
-  }
-}
-
-class Homepage extends StatefulWidget {
-  @override
-  _HomepageState createState() => new _HomepageState();
-}
-
-class _HomepageState extends State<Homepage> {
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(title: new Text("Home page")),
-      body: new Center(child: new Text("Hello world!")),
-    ); //Widgets and other code her
   }
 }
