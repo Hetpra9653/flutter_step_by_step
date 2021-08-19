@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       routes: {
-        "/": (context) => SplashScreen(),
+        "/": (context) => LoginPage(),
         "/homepage": (context) => HomePage(),
-        "/loginpage": (context) => LoginPage(),
+        "/loginpage": (context) => SplashScreen(),
       },
     );
   }

@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Container(decoration: BoxDecoration(color: Colors.blue.shade100)),
+          Container(decoration: BoxDecoration(color: Colors.indigo.shade900)),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       CircleAvatar(
-                        backgroundColor: Colors.orange.shade300,
+                        backgroundColor: Colors.lime[400],
                         backgroundImage: AssetImage("assets/logo.png"),
                         radius: 120.0,
                       )
