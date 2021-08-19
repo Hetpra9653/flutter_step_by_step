@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_steo_by_step/pages/login_page.dart';
+import 'package:flutter_steo_by_step/pages/logo.dart';
 import 'pages/home_page.dart';
+import 'pages/logo.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,11 +17,10 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      initialRoute: "/home",
       routes: {
-        "/": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage()
+        "/": (context) => SplashScreen(),
+        "/homepage": (context) => HomePage(),
+        "/loginpage": (context) => LoginPage(),
       },
     );
   }
