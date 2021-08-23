@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       theme: ThemeData.light(),
       routes: {
-        "/": (context) => HomePage(),
+        "/": (context) => LoginPage(),
         "/homepage": (context) => HomePage(),
         "/loginpage": (context) => LoginPage(),
         "/splashscreen": (context) => SplashScreen(),
