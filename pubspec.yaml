@@ -69,7 +69,7 @@ flutter:
   fonts:
     - family: times new roman
       fonts:
-        - asset: assets/times.ttf
+        - asset: assets/
         # - asset: fonts/Schyler-Italic.ttf
         #   style: italic
   #   - family: Trajan Pro

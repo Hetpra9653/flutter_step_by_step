@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_steo_by_step/pages/login_page.dart';
+// ignore: unused_import
 import 'package:flutter_steo_by_step/pages/logo.dart';
+import 'package:flutter_steo_by_step/utills/routes.dart';
 // ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
+// ignore: unused_import
 import 'pages/logo.dart';
 
 void main() {
@@ -23,9 +26,8 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData.light(),
       routes: {
         "/": (context) => LoginPage(),
-        "/homepage": (context) => HomePage(),
-        "/loginpage": (context) => LoginPage(),
-        "/splashscreen": (context) => SplashScreen(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
       },
     );
   }
