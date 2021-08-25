@@ -12,6 +12,11 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+            Color(0xffdae2f8),
+            Color(0xffd6a4a4),
+          ])),
           // we will give media query height
           // double.infinity make it big as my parent allows
           // while MediaQuery make it big as per the screen
