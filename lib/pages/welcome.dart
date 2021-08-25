@@ -13,89 +13,114 @@ class WelcomePage extends StatelessWidget {
       body: SafeArea(
         child: Container(
           decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
-            Color(0xffdae2f8),
-            Color(0xffd6a4a4),
-          ])),
+              image: DecorationImage(
+                  image: AssetImage('assets/bg.jpg'),
+                  fit: BoxFit.cover,
+                  colorFilter:
+                      ColorFilter.mode(Colors.black54, BlendMode.darken))),
+
           // we will give media query height
           // double.infinity make it big as my parent allows
           // while MediaQuery make it big as per the screen
 
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
-          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+          // padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
           child: Column(
             // even space distribution
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Column(
-                children: <Widget>[
-                  Text(
-                    "Welcome",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
+              Container(
+                padding: EdgeInsets.only(right: 145.0),
+                child: Column(children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.only(top: 30.0, right: 35.0),
+                    child: Text(
+                      "Welcome",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.0,
                   ),
-                  Text(
-                    " To our fuel dilevery app",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.grey[700],
-                      fontSize: 15,
+                  Container(
+                    child: Column(
+                      children: [
+                        // Padding(padding: EdgeInsets.only(left: 100.0)),
+                        Text(
+                          " To our fuel dilevery app",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
                     ),
-                  )
-                ],
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height / 3,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assets/Mobile login-bro.png"))),
+                  ),
+                ]),
               ),
               Column(
-                children: <Widget>[
-                  // the login button
-                  MaterialButton(
-                    minWidth: double.infinity,
-                    height: 60,
-                    onPressed: () {
-                      Navigator.popAndPushNamed(context, MyRoutes.loginRoute);
-                    },
-                    // defining the shape
-                    shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.black),
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Text(
-                      "Login",
-                      style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Center(
+                    child: CircleAvatar(
+                      minRadius: 50.0,
                     ),
                   ),
-                  // creating the signup button
-                  SizedBox(height: 20),
-                  MaterialButton(
-                    minWidth: double.infinity,
-                    height: 60,
-                    onPressed: () {
-                      // Navigator.popAndPushNamed(context, MyRoutes.signupRoute);
-                    },
-                    color: Color(0xff0095FF),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Text(
-                      "Sign up",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 18),
-                    ),
-                  )
                 ],
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Container(
+                child: Column(
+                  children: <Widget>[
+                    // the login button
+                    MaterialButton(
+                      minWidth: double.infinity,
+                      height: 60,
+                      onPressed: () {
+                        Navigator.popAndPushNamed(context, MyRoutes.loginRoute);
+                      },
+                      // defining the shape
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          side: BorderSide(color: Colors.white),
+                          borderRadius: BorderRadius.circular(50)),
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            color: Colors.pink),
+                      ),
+                    ),
+                    // creating the signup button
+                    SizedBox(height: 20),
+                    MaterialButton(
+                      minWidth: double.infinity,
+                      height: 60,
+                      onPressed: () {
+                        // Navigator.popAndPushNamed(context, MyRoutes.signupRoute);
+                      },
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50)),
+                      child: Text(
+                        "Sign up",
+                        style: TextStyle(
+                            color: Colors.pink,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),

@@ -30,8 +30,8 @@ class LoginPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 105.0),
                 child: GradientText('E-fuel Filling ',
                     style: TextStyle(
-                      fontFamily: GoogleFonts.fredokaOne().fontFamily,
-                      fontSize: 40.0,
+                      fontFamily: GoogleFonts.assistant().fontFamily,
+                      fontSize: 50.0,
                       fontWeight: FontWeight.bold,
                     ),
                     colors: [
@@ -46,14 +46,21 @@ class LoginPage extends StatelessWidget {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
+                          border: OutlineInputBorder(),
                           hintStyle: TextStyle(color: Colors.black),
+                          prefixIcon: Icon(Icons.email_rounded),
                           labelStyle: TextStyle(color: Colors.orange),
                           hintText: "Enter username or gmail",
                           labelText: "Username or gmail"),
                     ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
                     TextFormField(
                       obscureText: true,
                       decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          prefixIcon: Icon(Icons.password_rounded),
                           hintStyle: TextStyle(color: Colors.black),
                           labelStyle: TextStyle(color: Colors.orange),
                           hintText: "Enter your Password",
